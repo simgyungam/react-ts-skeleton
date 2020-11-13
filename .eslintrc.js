@@ -5,6 +5,7 @@ module.exports = {
       jsx: true,
     },
     project: './tsconfig.json',
+    extraFileExtensions: ['.html'],
     ecmaVersion: 2018,
     sourceType: 'module',
   },
