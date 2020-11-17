@@ -2,9 +2,7 @@
 
 # dependencies
 /node_modules
-
-# build files
-dist
+dist*
 
 # testing
 /coverage
