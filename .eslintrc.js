@@ -12,8 +12,8 @@ module.exports = {
   extends: [
     // 'react-app',
     "airbnb",
-    'airbnb-typescript',
     'airbnb/hooks',
+    'airbnb-typescript',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     // 'plugin:jest/recommended',
@@ -37,16 +37,12 @@ module.exports = {
       },
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.tsx'] }], // 在文件写jsx代码
-    'import/extensions': [ // import 导入规则
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        tsx: 'never',
-      },
-    ],
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+    ]
   },
   settings: {
     'import/resolver': {
