@@ -1,14 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    alias: {
-      '@': path.resolve(__dirname, "src/")
-    }
   },
   module: {
     rules: [
