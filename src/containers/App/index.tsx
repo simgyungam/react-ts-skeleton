@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LogoSVG from '@/logo.svg';
 import SideBar from '@/components/SideBar';
+import '@/styles/theme.scss';
 import './style.scss';
 
 class App extends Component {
