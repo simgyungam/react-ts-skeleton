@@ -31,6 +31,11 @@ class SideBar extends React.Component<Props, {}> {
     console.log('props', this.props);
   }
 
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { collapsed } = nextProps;
+    console.log('receive collapsed', collapsed);
+  }
+
   handleToggle() {
     this.props.toggle();
     console.log('toggle ...');

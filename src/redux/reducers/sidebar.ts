@@ -27,6 +27,7 @@ export const defaultState = getInitialCollapsed();
 
 export default combineReducers<any, any>({
   collapsed: (state = defaultState, action) => {
+    console.log('collapsed action', action);
     const { type } = action;
     if (type === TOGGLE_SIDEBAR) {
       const collapsed = !state;
