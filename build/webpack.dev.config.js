@@ -23,6 +23,12 @@ baseConfig.module.rules.push(
       'style-loader',
       {
         loader: 'css-loader',
+        options: {
+          modules: {
+            localIdentName: '[local]_[hash:base64:5]',
+            localIdentContext: path.resolve(__dirname, "src"),
+          },
+        },
       },
       'sass-loader',
     ],

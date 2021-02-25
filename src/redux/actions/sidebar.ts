@@ -1,4 +1,7 @@
-import { createAction } from 'typesafe-actions';
+import { action } from 'typesafe-actions';
 import { TOGGLE_SIDEBAR } from '../constants';
 
-export const toggle = () => createAction(TOGGLE_SIDEBAR)();
+// with payload
+// export const toggle = (t: boolean) => action(TOGGLE_SIDEBAR, t);
+
+export const toggle = () => action(TOGGLE_SIDEBAR);

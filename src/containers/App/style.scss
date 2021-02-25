@@ -1,9 +1,37 @@
 @import '../../styles/base.scss';
 
-.container {
-  text-align: center;
+$header-height: 50px;
+
+html {
+  font-size: 10px;
 }
 
-.logo {
-  margin: 100px auto 20px auto;
+.container {
+  min-height: 100vh;
+  padding: 0.1px;
+  color: #333;
+  background-color: rgba(218,223,225,.2);
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    background-color: $primary;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    // background-color: $secondary;
+  }
+
+  .main {
+    margin-left: 200px;
+    margin-top: 50px;
+  }
 }

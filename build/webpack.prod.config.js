@@ -40,6 +40,13 @@ baseConfig.module.rules.push(
       },
       {
         loader: 'css-loader',
+        options: {
+          modules: {
+            localIdentName: '[local]_[hash:base64:5]',
+            localIdentContext: path.resolve(__dirname, "src"),
+          },
+          // importLoaders: 1,
+        },
       },
       'sass-loader',
     ],

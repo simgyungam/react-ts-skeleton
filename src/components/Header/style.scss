@@ -1,0 +1,37 @@
+@import '../../styles/base.scss';
+
+.container {
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  color: #fff;
+
+  .title {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .dropdown {
+    font-size: 1.4rem;
+    margin-left: 5px;
+    background: transparent;
+    border: none;
+    height: unset;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background: $secondary;
+    }
+
+    img {
+      width: 16px;
+      margin-left: 5px;
+    }
+  }
+}

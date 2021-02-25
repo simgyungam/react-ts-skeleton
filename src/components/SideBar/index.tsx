@@ -1,7 +1,9 @@
 import * as React from 'react';
 import MyTypes from 'MyTypes';
 import { connect } from 'react-redux';
+// import { bindActionCreators, Dispatch } from 'redux';
 import { toggle as toggleAction } from '@/redux/actions/sidebar';
+import Button from '@material-ui/core/Button';
 
 // type Props = {
 //   collapsed: boolean;
@@ -15,9 +17,14 @@ const mapDispatchToProps = {
   toggle: toggleAction
 };
 
-type Props = ReturnType<typeof mapStateToProps>;
+type States = ReturnType<typeof mapStateToProps>;
+// type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
-class SideBar extends React.Component<Props, {}> {
+type Props = States & {
+  toggle: any;
+};
+
+class SideBar extends React.Component<Props, States> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -37,8 +44,8 @@ class SideBar extends React.Component<Props, {}> {
   }
 
   handleToggle() {
-    this.props.toggle();
-    console.log('toggle ...');
+    // this.props.toggle();
+    console.log('toggle ...', this.props.toggle());
   }
 
   render() {
@@ -49,10 +56,10 @@ class SideBar extends React.Component<Props, {}> {
 
     return (
       <div>
-        <p>Side Bar</p>
-        <button className="button is-primary" onClick={this.handleToggle}>
+        <p>This is Side Bar</p>
+        <Button variant="contained" color="primary" onClick={this.handleToggle}>
           Primary button
-        </button>
+        </Button>
       </div>
     );
   }

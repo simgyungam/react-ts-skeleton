@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+
 module.exports = {
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
@@ -16,7 +17,22 @@ module.exports = {
       test: /\.(js|jsx|ts|js)x?$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        query: {
+          plugins: [
+            '@babel/transform-react-jsx',
+            [
+              'react-css-modules',
+              {
+                context: path.resolve(__dirname, 'src'),
+                generateScopedName: '[local]_[hash:base64:5]',
+                filetypes: {
+                  '.scss': { syntax: 'postcss-scss' },
+                },
+              },
+            ],
+          ],
+        },
       },
     },
     {
