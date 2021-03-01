@@ -1,14 +1,15 @@
 import * as React from 'react';
 import MyTypes from 'MyTypes';
 import { connect } from 'react-redux';
-// import { bindActionCreators, Dispatch } from 'redux';
+import {
+ MenuList,
+ MenuItem,
+} from '@material-ui/core';
 import { toggle as toggleAction } from '@/redux/actions/sidebar';
-import Button from '@material-ui/core/Button';
+import CollapseSvg from '@/assets/img/menu-collapse.svg';
+import ExpandSvg from '@/assets/img/menu-expand.svg';
+import styles from './styles.scss';
 
-// type Props = {
-//   collapsed: boolean;
-//   toggle: MyTypes.RootAction;
-// }
 const mapStateToProps = (state: MyTypes.RootState) => ({
   collapsed: state.sidebar.collapsed
 });
@@ -18,13 +19,20 @@ const mapDispatchToProps = {
 };
 
 type States = ReturnType<typeof mapStateToProps>;
-// type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
 type Props = States & {
   toggle: any;
 };
 
 class SideBar extends React.Component<Props, States> {
+  static getDerivedStateFromProps (nextProps: Props, prevState: States) {
+    const { collapsed } = nextProps;
+    if (collapsed !== prevState.collapsed) {
+      return { collapsed }
+    }
+    return null;
+  }
+
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -33,33 +41,26 @@ class SideBar extends React.Component<Props, States> {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  componentDidMount() {
-    console.log('state', this.state);
-    console.log('props', this.props);
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const { collapsed } = nextProps;
-    console.log('receive collapsed', collapsed);
-  }
-
   handleToggle() {
-    // this.props.toggle();
-    console.log('toggle ...', this.props.toggle());
+    this.props.toggle();
   }
 
   render() {
     const {
       collapsed,
     } = this.state;
-    console.log('collapsed', collapsed);
 
     return (
-      <div>
-        <p>This is Side Bar</p>
-        <Button variant="contained" color="primary" onClick={this.handleToggle}>
-          Primary button
-        </Button>
+      <div className={styles.sidebar}>
+        <div className={styles.btn}>
+          <button onClick={this.handleToggle}>
+            <img src={collapsed ? ExpandSvg : CollapseSvg} alt="Collapse menu" />
+          </button>
+        </div>
+        <MenuList className="sidebar-menu">
+          <MenuItem>图标菜单</MenuItem>
+          <MenuItem>都行菜单</MenuItem>
+        </MenuList>
       </div>
     );
   }

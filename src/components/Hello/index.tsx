@@ -2,7 +2,7 @@ import React from 'react';
 
 function Hello(): JSX.Element {
   return (
-    <div style={{ fontSize: '28px', color: '#333', margin: '5vh 0', textAlign: 'center' }}>
+    <div className="panel" style={{ fontSize: '28px', color: '#333', textAlign: 'center', height: '50vh' }}>
       This is Hello component
     </div>
   );

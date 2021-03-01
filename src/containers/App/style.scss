@@ -1,6 +1,8 @@
 @import '../../styles/base.scss';
 
 $header-height: 50px;
+$sidebar-normal-width: 200px;
+$sidebar-collapse-width: 45px;
 
 html {
   font-size: 10px;
@@ -26,12 +28,27 @@ html {
     top: $header-height;
     left: 0;
     bottom: 0;
-    width: 200px;
-    // background-color: $secondary;
+    background-color: #fff;
+    width: $sidebar-normal-width;
+
+    &.collapsed {
+      width: $sidebar-collapse-width;
+  
+      :global(.sidebar-menu .MuiMenuItem-root) {
+        padding: 6px 10px;
+        width: 38px;
+      }
+    }
   }
 
   .main {
-    margin-left: 200px;
+    margin-left: $sidebar-normal-width;
     margin-top: 50px;
+    padding: 15px;
+
+    &.collapsed {
+      margin-left: $sidebar-collapse-width;
+    }
   }
 }
+

@@ -1,3 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+:global(.panel) {
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(189, 195, 199, .8);
+}
+
 :global(.flex) {
   display: flex;
   align-items: center;
@@ -6,5 +28,11 @@
 :global(.user-dropdown) {
   :global(.MuiListItem-root) {
     font-size: 1.2rem;
+  }
+}
+
+:global(.sidebar-menu) {
+  :global(.MuiMenuItem-root) {
+    font-size: 1.4rem;
   }
 }
