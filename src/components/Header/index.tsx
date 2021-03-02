@@ -3,6 +3,7 @@ import { Menu, MenuItem } from '@material-ui/core';
 import LoGOSvg from '@/assets/img/logo.svg';
 import AvatarSvg from '@/assets/img/avatar.svg';
 import ArrowSvg from '@/assets/img/arrow-down.svg';
+import { removeToken, goUcLogin } from 'uc-lib';
 import styles from './style.scss';
 
 type States = {
@@ -34,6 +35,8 @@ class Header extends Component<{}, States> {
 
   handleSignOut() {
     console.log('sign out');
+    removeToken();
+    setTimeout(goUcLogin, 500);
   }
 
   render() {

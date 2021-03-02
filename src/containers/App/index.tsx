@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import MyTypes from 'MyTypes';
 import Header from '@/components/Header';
 import SideBar from '@/components/SideBar';
+import { goUcLogin, getToken } from 'uc-lib';
 import '../../styles/theme.scss';
 import styles from './style.scss';
 
-const mapStateToProps = (state: MyTypes.RootState) => ({
+const mapStateToProps = (state: MyTypes.RootState, props) => ({
+  history: props.history,
   collapsed: state.sidebar.collapsed
 });
 
@@ -29,9 +32,18 @@ class App extends Component<Props, Props> {
     };
   }
 
+  componentDidMount() {
+    const token = getToken();
+    if (!token) {
+      // goUcLogin();
+      console.log('%c!!! 未登录，需跳转到登录页面', 'color: #f00;');
+    }
+  }
+
   render() {
-    const { children } = this.props;
+    const { children, allProps } = this.props;
     const { collapsed } = this.state;
+    console.log('allProps', allProps);
 
     return (
       <div className={styles.container}>
@@ -45,4 +57,4 @@ class App extends Component<Props, Props> {
   }
 }
 
-export default connect(mapStateToProps, null)(App);
+export default withRouter(connect(mapStateToProps, null)(App));

@@ -4861,6 +4861,11 @@
   "resolved" "https://registry.npmjs.org/js-base64/-/js-base64-2.6.4.tgz"
   "version" "2.6.4"
 
+"js-cookie@^2.2.1":
+  "integrity" "sha1-aeEG3F1YBolFYpAqpbrsN0Tpsrg="
+  "resolved" "http://172.16.100.47:4873/js-cookie/-/js-cookie-2.2.1.tgz"
+  "version" "2.2.1"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -8064,6 +8069,13 @@
   "integrity" "sha512-dvdQgNDNJo+8B2uBQoqdb11eUCE1JQXhvjC/CZtgvZseVd5TYMXnq0+vuUemXbd/Se29cTaUuPX3YIc2xgbvIg=="
   "resolved" "https://registry.npmjs.org/typical/-/typical-5.2.0.tgz"
   "version" "5.2.0"
+
+"uc-lib@^1.0.4":
+  "integrity" "sha512-nrXXQxJ1vnJtiiGD0y0JiYRhOozjWhWUtC+YMkghRzg3WqBqmVUR8AmqnToiSLhIDF9SSqivLk/184x/+VT0Qg=="
+  "resolved" "http://172.16.100.47:4873/uc-lib/-/uc-lib-1.0.4.tgz"
+  "version" "1.0.4"
+  dependencies:
+    "js-cookie" "^2.2.1"
 
 "unicode-canonical-property-names-ecmascript@^1.0.4":
   "integrity" "sha512-jDrNnXWHd4oHiTZnx/ZG7gtUTVp+gCcTTKr8L0HjlwphROEW3+Him+IpvC+xcJEFegapiMZyZe02CyuOnRmbnQ=="

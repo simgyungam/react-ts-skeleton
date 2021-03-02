@@ -4,6 +4,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import store, { history } from '@/redux/store/configureStore';
 import Routes from './Routes';
 
+
 class App extends Component {
   render() {
     return (
