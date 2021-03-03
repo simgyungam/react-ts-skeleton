@@ -6,8 +6,10 @@ import {
  MenuItem,
 } from '@material-ui/core';
 import { toggle as toggleAction } from '@/redux/actions/sidebar';
+import { History, Location } from 'history';
 import CollapseSvg from '@/assets/img/menu-collapse.svg';
 import ExpandSvg from '@/assets/img/menu-expand.svg';
+import { MENUS } from './menus';
 import styles from './styles.scss';
 
 const mapStateToProps = (state: MyTypes.RootState) => ({
@@ -22,6 +24,8 @@ type States = ReturnType<typeof mapStateToProps>;
 
 type Props = States & {
   toggle: any;
+  history: History;
+  location: Location;
 };
 
 class SideBar extends React.Component<Props, States> {
@@ -39,10 +43,22 @@ class SideBar extends React.Component<Props, States> {
       collapsed: props.collapsed
     }
     this.handleToggle = this.handleToggle.bind(this);
+    this.computedActive = this.computedActive.bind(this);
   }
 
-  handleToggle() {
+  handleToggle(): void {
     this.props.toggle();
+  }
+
+  handleJump(path: string): void {
+    this.props.history.push(path);
+  }
+
+  computedActive(regStr: string): boolean {
+    const { location } = this.props;
+    const reg = new RegExp(regStr);
+    console.log('sidebar location', location);
+    return reg.test(location.pathname);
   }
 
   render() {
@@ -58,8 +74,15 @@ class SideBar extends React.Component<Props, States> {
           </button>
         </div>
         <MenuList className="sidebar-menu">
-          <MenuItem>图标菜单</MenuItem>
-          <MenuItem>都行菜单</MenuItem>
+          {MENUS.map(menu => (
+            <MenuItem
+              key={menu.name}
+              className={this.computedActive(menu.reg) ? 'active' : ''}
+              onClick={() => this.handleJump(menu.path)}
+            >
+              {menu.zh}
+            </MenuItem>
+          ))}
         </MenuList>
       </div>
     );

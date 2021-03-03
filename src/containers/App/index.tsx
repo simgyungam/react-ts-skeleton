@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import MyTypes from 'MyTypes';
+import { History, Location } from 'history';
 import Header from '@/components/Header';
 import SideBar from '@/components/SideBar';
 import { goUcLogin, getToken } from 'uc-lib';
 import '../../styles/theme.scss';
 import styles from './style.scss';
 
-const mapStateToProps = (state: MyTypes.RootState, props) => ({
+const mapStateToProps = (state: MyTypes.RootState, props: { history: History, location: Location }) => ({
+  location: props.location,
   history: props.history,
   collapsed: state.sidebar.collapsed
 });
 
 type Props = ReturnType<typeof mapStateToProps>;
 
-class App extends Component<Props, Props> {
+type States = {
+  collapsed: boolean;
+}
+
+class App extends Component<Props, States> {
   static getDerivedStateFromProps(nextProps: Props, prevState: Props) {
     const { collapsed } = nextProps;
     if (collapsed !== prevState.collapsed) {
@@ -41,14 +47,16 @@ class App extends Component<Props, Props> {
   }
 
   render() {
-    const { children, allProps } = this.props;
+    const { children, history, location } = this.props;
     const { collapsed } = this.state;
-    console.log('allProps', allProps);
+    // console.log('app location', location);
 
     return (
       <div className={styles.container}>
         <section className={styles.header}><Header /></section>
-        <section className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}><SideBar /></section>
+        <section className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}>
+          <SideBar history={history} location={location} />
+        </section>
         <section className={`${styles.main} ${collapsed ? styles.collapsed : ''}`}>
           {children}
         </section>

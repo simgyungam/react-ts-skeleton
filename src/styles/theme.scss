@@ -1,6 +1,12 @@
+@import './base.scss';
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 
 button {
@@ -34,5 +40,20 @@ button {
 :global(.sidebar-menu) {
   :global(.MuiMenuItem-root) {
     font-size: 1.4rem;
+    position: relative;
+  }
+
+  :global(.active) {
+    color: $secondary;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 2px;
+      background-color: $secondary;
+      height: 70%;
+      transform: translate(0, -50%);
+    }
   }
 }
