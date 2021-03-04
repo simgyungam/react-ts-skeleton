@@ -14,7 +14,7 @@ const mapStateToProps = (state: MyTypes.RootState, props: { history: History, lo
   collapsed: state.sidebar.collapsed
 });
 
-type Props = RouteComponentProps & ReturnType<typeof mapStateToProps>;
+type Props = ReturnType<typeof mapStateToProps>;
 
 type States = {
   collapsed: boolean;

@@ -35,8 +35,7 @@ html {
       width: $sidebar-collapse-width;
   
       :global(.sidebar-menu .MuiMenuItem-root) {
-        padding: 6px 10px;
-        width: 38px;
+        padding: 6px 0 6px 10px;
       }
     }
   }

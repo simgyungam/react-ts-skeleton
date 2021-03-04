@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import {
   BrowserRouter as Router,
   Route,
@@ -17,27 +16,12 @@ const routes = (
         <Switch>
           <Route exact path="/" component={Hello} />
           <Route exact path="/hello"><Hello /></Route>
-          <Route><NotFound /></Route>
+          <Route path="*"><NotFound /></Route>
         </Switch>
       </App>
     </AuthLaunch>
   </Router>
 );
-
-// const propTypes = {
-//   history: PropTypes.any.isRequired,
-// };
-
-// const Routes = (props) => {
-//   const { history } = props;
-//   return (
-//     <ConnectedRouter history={history}>
-//       {routes}
-//     </ConnectedRouter>
-//   );
-// };
-
-// Routes.propTypes = propTypes;
 
 function Routes(): JSX.Element {
   return routes;
