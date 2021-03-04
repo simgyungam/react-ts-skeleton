@@ -5,19 +5,22 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import AuthLaunch from './AuthLaunch';
 import App from './App';
 import Hello from '../components/Hello';
 import NotFound from './NotFound';
 
 const routes = (
   <Router>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Hello} />
-        <Route exact path="/hello"><Hello /></Route>
-        <Route><NotFound /></Route>
-      </Switch>
-    </App>
+    <AuthLaunch>
+      <App>
+        <Switch>
+          <Route exact path="/" component={Hello} />
+          <Route exact path="/hello"><Hello /></Route>
+          <Route><NotFound /></Route>
+        </Switch>
+      </App>
+    </AuthLaunch>
   </Router>
 );
 

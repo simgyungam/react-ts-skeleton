@@ -57,7 +57,6 @@ class SideBar extends React.Component<Props, States> {
   computedActive(regStr: string): boolean {
     const { location } = this.props;
     const reg = new RegExp(regStr);
-    console.log('sidebar location', location);
     return reg.test(location.pathname);
   }
 
