@@ -37,6 +37,10 @@ class App extends Component<Props, States> {
     };
   }
 
+  componentDidMount() {
+    this.props.history.push('/images');
+  }
+
   render() {
     const { children, history, location } = this.props;
     const { collapsed } = this.state;

@@ -5,7 +5,12 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 1.4rem;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 
@@ -17,6 +22,17 @@ button {
   &:focus, &:active {
     outline: none;
   }
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:global(.m-b-md) {
+  margin-bottom: 15px;
 }
 
 :global(.panel) {
@@ -55,5 +71,63 @@ button {
       height: 70%;
       transform: translate(0, -50%);
     }
+  }
+}
+
+:global(.breadcrumbs) {
+  :global(.MuiTypography-body1) {
+    font-size: 1.4rem;
+  }
+
+  :global(.MuiTypography-colorTextSecondary) {
+    color: $secondary;
+  }
+
+  :global(.MuiTypography-colorTextPrimary) {
+    color: $text-secondary;
+  }
+}
+
+:global(.panel-title) {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+:global(.primary-table) {
+  font-family: PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-align: left;
+
+  thead {
+    background-color: rgba(218,223,225,.8);
+    color: #6c7a89;
+
+    th {
+      padding: 8px;
+      font-weight: 400;
+      border: 1px solid #ddd;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 8px;
+    }
+  }
+}
+
+:global(.table-bordered) {
+  thead > tr > th:not(:last-child) {
+    border-right: 1px solid #dadfe1;
+  }
+
+  thead > tr > th:not(:first-child) {
+    border-left: 1px solid #dadfe1;
+  }
+
+  tbody > tr > td {
+    border: 1px solid #dadfe1;
   }
 }

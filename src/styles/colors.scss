@@ -1,0 +1,198 @@
+// -----------------------------------------------------------------------------
+// Gray Palette
+// -----------------------------------------------------------------------------
+
+$darkgray                 : #2c3643 !default;
+$titlegray                : #3b444f !default;
+$bodygray                 : #67747c !default;
+$lightgray                : #99a9b3 !default;
+$subduedgray              : #dbe6ec !default;
+
+
+// -----------------------------------------------------------------------------
+// Primary Palette
+// -----------------------------------------------------------------------------
+
+$darkblue                  : #142b44 !default;
+$navblue                   : #1d508d !default;
+$lpblue                    : #297CBB !default;
+$linkblue                  : #288ad6 !default;
+$teal                      : #0FDEBD !default;
+$green                     : #16c98d !default;
+$yella                     : #feef6d !default;
+$orange                    : #ffc83f !default;
+$red                       : #fa5e5b !default;
+$plum                      : #bf538d !default;
+
+
+// -----------------------------------------------------------------------------
+// Secondary Palette
+// -----------------------------------------------------------------------------
+
+$mauve                     : #684e79 !default;
+$pink                      : #ff708e !default;
+$darkcyan                  : #47a899 !default;
+$softblue                  : #8abee5 !default;
+$softgreen                 : #c7e6aa !default;
+$beige                     : #cfcbaf !default;
+$maroon                    : #582c2b !default;
+$darkred                   : #841e1b !default;
+$golden                    : #bf9b30 !default;
+$darkgolden                : #a2812e !default;
+
+// -----------------------------------------------------------------------------
+// Palette From http://www.flatuicolorpicker.com/
+// -----------------------------------------------------------------------------
+
+// Gray
+$c-whitesmoke: #ececec;
+$c-lynch: #6c7a89;
+$c-pumice: #d2d7d3;
+$c-gallery: #eeeeee;
+$c-silversand: #bdc3c7;
+$c-porcelain: #ecf0f1;
+$c-cascade: #95a5a6;
+$c-iron: #dadfe1;
+$c-edward: #abb7b7;
+$c-cararra: #f2f1ef;
+$c-silver: #bfbfbf;
+
+// Blue
+$c-sanmarino: #446cb3;
+$c-aliceblue: #e4f1fe;
+$c-royalblue: #4183d7;
+$c-pictonblue: #59abe3;
+$c-spray: #81cfe0;
+$c-shakespeare: #52b3d9;
+$c-hummingbird: #c5eff7;
+$c-pictonblue: #22a7f0;
+$c-curiousblue: #3498db;
+$c-madison: #2c3e50;
+$c-dodgerblue: #19b5fe;
+$c-ming: #336e7b;
+$c-ebonyclay: #22313f;
+$c-malibu: #6bb9f0;
+$c-summersky: #1e8bc3;
+$c-chambray: #3a539b;
+$c-pickledbluewood: #34495e;
+$c-hoki: #67809f;
+$c-jellybean: #2574a9;
+$c-jacksonspurple: #1f3a93;
+$c-jordyblue: #89c4f4;
+$c-steelblue: #4b77be;
+$c-fountainblue: #5c97bf;
+
+// yellow
+$c-creamcan: #f5d76e;
+$c-ripelemon: #f7ca18;
+$c-saffron: #f4d03f;
+
+// green
+$c-mediumturquoise: #4ecdc4;
+$c-aquaisland: #a2ded0;
+$c-gossip: #87d37c;
+$c-darkseagreen: #90c695;
+$c-eucalyptus: #26a65b;
+$c-caribbeangreen: #03c9a9;
+$c-silvertree: #68c3a3;
+$c-downy: #65c6bb;
+$c-mountainmeadow: #1bbc9b;
+$c-lightseagreen: #1ba39c;
+$c-mediumaquamarine: #66cc99;
+$c-turquoise: #36d7b7;
+$c-madang: #c8f7c5;
+$c-riptide: #86e2d5;
+$c-shamrock: #2ecc71;
+$c-niagara: #16a085;
+$c-emerald: #3fc380;
+$c-greenhaze: #019875;
+$c-freespeechaquamarine: #03a678;
+$c-oceangreen: #4daf7c;
+$c-niagara1: #2abb9b;
+$c-jade: #00b16a;
+$c-salem: #1e824c;
+$c-observatory: #049372;
+$c-junglegreen: #26c281;
+
+
+// red
+$c-softred: #ec644b;
+$c-chestnutrose: #d24d57;
+$c-pomegranate: #f22613;
+$c-thunderbird: #d91e18;
+$c-oldbrick: #96281b;
+$c-flamingo: #ef4836;
+$c-valencia: #d64541;
+$c-tallpoppy: #c0392b;
+$c-monza: #cf000f;
+$c-cinnabar: #e74c3c;
+
+// pink
+$c-razzmatazz: #db0a5b;
+$c-sunsetorange: #f64747;
+$c-waxflower: #f1a9a0;
+$c-cabaret: #d2527f;
+$c-newyorkpink: #e08283;
+$c-radicalred: #f62459;
+$c-sunglo: #e26a6a;
+
+// orange
+$c-confetti: #e9d460;
+$c-capehoney: #fde3a7;
+$c-california: #f89406;
+$c-firebush: #eb9532;
+$c-tahitigold: #e87e04;
+$c-casablanca: #f4b350;
+$c-crusta: #f2784b;
+$c-seabuckthorn: #eb974e;
+$c-lightningyellow: #f5ab35;
+$c-burntorange: #d35400;
+$c-buttercup: #f39c12;
+$c-ecstasy: #f9690e;
+$c-sandstorm: #f9bf3b;
+$c-jaffa: #f27935;
+$c-zest: #e67e22;
+
+// purples
+$c-snuff: #dcc6e0;
+$c-rebeccapurple: #663399;
+$c-honeyflower: #674172;
+$c-wistful: #aea8d3;
+$c-plum: #913d88;
+$c-seance: #9a12b3;
+$c-mediumpurple: #bf55ec;
+$c-lightwisteria: #be90d4;
+$c-studio: #8e44ad;
+$c-wisteria: #9b59b6;
+
+
+$c-font-normal             : #171717;
+
+$c-info                    : $c-steelblue !default;
+$c-default                 : $c-lynch !default;
+$c-success                 : #09C199 !default;
+$c-warning                 : $c-buttercup !default;
+$c-danger                  : #f5222d;
+
+// white
+$c-border-white            : $c-edward !default;
+
+// light
+$c-hover-bg-light          : $c-aliceblue;
+$c-hover-fg-light          : $c-lynch;
+$c-border-light            : rgba($c-aliceblue, 0.6) !default;
+$c-shadow-light            : rgba($c-lynch, 0.3) !default;
+
+// primary
+$c-primary                 : #00a3ea !default;
+$c-hover-bg-primary        : $c-aliceblue;
+$c-hover-fg-primary        : $c-primary;
+$c-border-primary          : rgba($c-aliceblue, 0.6) !default;
+$c-shadow-primary          : rgba($c-lynch, 0.3) !default;
+
+// primary
+$c-default                 : $c-default !default;
+$c-hover-bg-default        : $c-aliceblue;
+$c-hover-fg-default        : $c-default;
+$c-border-default          : rgba($c-aliceblue, 0.6) !default;
+$c-shadow-default          : rgba($c-lynch, 0.3) !default;

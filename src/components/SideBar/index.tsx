@@ -79,7 +79,7 @@ class SideBar extends React.Component<Props, States> {
               className={this.computedActive(menu.reg) ? 'active' : ''}
               onClick={() => this.handleJump(menu.path)}
             >
-              {menu.zh}
+              {collapsed ? (menu.text || '').slice(0, 2) : menu.text}
             </MenuItem>
           ))}
         </MenuList>

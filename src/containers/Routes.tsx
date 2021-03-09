@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import AuthLaunch from './AuthLaunch';
 import App from './App';
-import Hello from '../components/Hello';
+import Images from './Images';
 import NotFound from './NotFound';
 
 const routes = (
@@ -14,8 +14,8 @@ const routes = (
     <AuthLaunch>
       <App>
         <Switch>
-          <Route exact path="/" component={Hello} />
-          <Route exact path="/hello"><Hello /></Route>
+          <Route exact path="/" component={Images} />
+          <Route exact path="/images" component={Images}></Route>
           <Route path="*"><NotFound /></Route>
         </Switch>
       </App>
