@@ -22,7 +22,7 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended'
   ],
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["@typescript-eslint", "react", "formatjs"],
   env: {
     browser: true,
     es6: true,
@@ -45,6 +45,7 @@ module.exports = {
     ],
     'no-implicit-dependencies': [true, ['src']],
     'no-submodule-imports': [true, 'src'],
+    "formatjs/no-offset": "error"
   },
   settings: {
     'import/resolver': {
